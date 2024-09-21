@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #78c1f3;
+}
+#message-box{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    pointer-events: none;
+    z-index: 1000;
+    color: rgb(255, 115, 0);
+    opacity: 0;
+    transition: 1s;
+}
+
+.container{
+    background: #fff;
+    width: 400px;
+    padding: 27px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out 0s;
+    position: relative;
+}
+
+.form-group{
+    margin-block: 20px;
+    text-align: start;
+}
+
+h4{
+    margin: 10px 0;
+}
+
+.form-group input{
+    width: 100%;
+    height: 49px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.form-group input:focus{
+    border: 1px solid #4CAF50;
+}
+span{
+    font-weight: 600;
+}
+button{
+    height: 44px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 17px;
+    background: #78c1f3;
+    border: none;
+    color: white;
+    border-radius: 4.9px;
+}
+
+.otp-form{
+    display: block;
+    margin: 20px 0;
+}
+
+.otp-form p{
+    margin: 20px;
+    color: green;
+}
+
+.otp-group{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.otp-group input{
+    height: 49px;
+    width: 49px;
+    padding: 4.9px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #a3a3a3;
+}
+
+.otp-group input:focus{
+    border-bottom: 2px solid #4CAF50;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+img{
+    height: 149px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #78c1f3;
+    margin: 10px 0;
+}
+
+button.disable{
+    opacity: 0.49;
+    /* cursor: not-allowed; */
+    pointer-events: none;
+}
+
+.error-shake {
+    animation: shake 0.3s ease-in-out 0s 2;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+

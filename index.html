@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</head>
+
+<body>
+
+    <div id="message-box"></div>    
+
+    <!-- Email Container -->
+    <div class="container step1">
+        <h2>OTP Verification</h2>
+        <h4>Enter Your Email Address</h4>
+        <p>You will recive an email with a one-time password</p>
+        
+        <div class="form-group">
+            <input type="email" id="emailAddress" placeholder="Email Address" onkeyup="validateEmail(this.value)" />
+        </div>
+        <button class="nextButton">Next &rarr;</button>
+    </div>
+    
+    <!-- Verify Container-->
+    <div class="container step2">
+        <h2>OTP Verification</h2>
+        <h4>Enter one-time password</h4>
+        <p>A one-time password has been sent to <span id="verifyEmail"></span></p>
+        
+        <div class="otp-form">
+            <p>Enter the 4 digit code we sent you via email to continue</p>
+            <div class="otp-group">
+                <input type="text" class="otp-input" id="otp1" />
+                <input type="text" class="otp-input" id="otp2" />
+                <input type="text" class="otp-input" id="otp2" />
+                <input type="text" class="otp-input" id="otp2" />
+            </div>
+            <p>Not your email / Didn't receive the code? <a href="javaScript:void(0)" onclick="changeEmail()">Try Again</a></p>
+        </div>
+        <button class="verifyButton">Verify &rarr;</button>
+    </div>
+    
+    <!-- Welcome Page Container-->
+    <div class="container step3">
+        <h2>Congratulation</h2>
+        <h4>Welcome to Home Page</h4>
+        <img src="checked.png" alt="">
+        <h2>Thank You</h2>
+        <p>Your OPT Varification has been completed Successfully</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
